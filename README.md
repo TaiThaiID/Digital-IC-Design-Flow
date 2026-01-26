@@ -1,11 +1,6 @@
 # Full-Flow Digital & Custom IC Design (45nm Technology)
 
-![Tools](https://img.shields.io/badge/Tools-Cadence_Virtuoso_|_Genus_|_Xcelium-red)
-![Language](https://img.shields.io/badge/Language-SystemVerilog_|_TCL-blue)
-![Tech Node](https://img.shields.io/badge/Tech_Node-GPDK_45nm-green)
-![Status](https://img.shields.io/badge/Layout-DRC%2FLVS_Clean-success)
-
-## 📌 Project Overview
+## Project Overview
 This repository demonstrates a comprehensive **VLSI Design Flow**, ranging from **RTL Design** to **Physical Layout** using the **GPDK 45nm** process technology.
 
 The project simulates the complete lifecycle of standard cell design and digital system implementation, focusing on **Timing Analysis (STA)**, **Low-Power techniques (Clock Gating)**, and **Physical Verification (DRC/LVS)**.
@@ -19,7 +14,7 @@ The project simulates the complete lifecycle of standard cell design and digital
 
 ---
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 * **Front-end:** Cadence Xcelium (Simulation), SimVision (Debug), Cadence Genus (Synthesis).
 * **Back-end:** Cadence Virtuoso Schematic Editor, Virtuoso Layout Suite XL, ADE L (Analog Design Environment).
 * **Verification:** PVS (Physical Verification System) for DRC/LVS.
@@ -27,23 +22,24 @@ The project simulates the complete lifecycle of standard cell design and digital
 
 ---
 
-## 1️⃣ Front-End: RTL to Synthesis & STA
+## Front-End: RTL to Synthesis & STA
 
-### 🔹 RTL Design & Verification
+### RTL Design & Verification
 Designed an 8-bit Registered ALU capable of Addition, Subtraction, AND, XOR operations.
 * **Feature:** Synchronous Reset, Flag generation (Overflow, Carry).
 * **Verification:** Verified using constrained-random testbenches in Xcelium.
 
-### 🔹 Logic Synthesis & Optimization
+### Logic Synthesis & Optimization
 Performed logic synthesis mapping RTL to the **45nm Standard Cell Library**.
 * **Corner Analysis:** Analyzed Timing/Power/Area across multiple PVT corners (Process: Slow/Fast, Temp: -40°C to 125°C).
 * **Static Timing Analysis (STA):**
     * Defined clock constraints and I/O delays using SDC files.
     * Analyzed Critical Paths and Setup/Hold violations.
 
-*[Insert Image: Screenshot of Critical Path Highlight or Timing Report Summary from Lab 3 Report]*
+<img width="766" height="622" alt="image" src="https://github.com/user-attachments/assets/591887df-67f8-4c4e-8179-9bf21c23a22f" />
 
-### 🔹 Low Power Implementation (Clock Gating)
+
+### Low Power Implementation (Clock Gating)
 Implemented integrated **Clock Gating (ICG)** cells to disable clock signals for inactive logic blocks.
 * **Result:** Reduced dynamic power consumption compared to the non-gated baseline design.
 
@@ -51,44 +47,24 @@ Implemented integrated **Clock Gating (ICG)** cells to disable clock signals for
 
 ---
 
-## 2️⃣ Back-End: Custom Circuit Design & Layout
+## Back-End: Custom Circuit Design & Layout
 
-### 🔹 Transistor-Level Design (Schematic)
+### Transistor-Level Design (Schematic)
 Designed CMOS schematics for fundamental logic gates: **Inverter, NAND, NOR, XOR, and 2:1 MUX**.
 * Calculated W/L ratios to achieve symmetric Rise/Fall times ($t_r \approx t_f$) and $V_M \approx V_{DD}/2$.
 * Performed DC Analysis (Voltage Transfer Characteristic) and Transient Simulation.
 
 *[Insert Image: Schematic of the XOR or MUX Gate from Lab 4 Report]*
 
-### 🔹 Physical Layout (The "Art" of IC Design)
+### Physical Layout (The "Art" of IC Design)
 Converted schematics into physical layouts adhering to **GPDK 45nm Design Rules**.
 * **Strategy:** Minimized parasitic capacitance, shared diffusion areas (Euler paths), and ensured standard cell height compliance.
 * **Verification:**
     * **DRC:** 100% Clean (No Design Rule Violations).
     * **LVS:** Matched (Layout matches Schematic netlist).
 
-| Logic Gate | Layout View | LVS Status |
-| :---: | :---: | :---: |
-| **Inverter** | *[Insert Layout Screenshot]* | ✅ Pass |
-| **NAND2** | *[Insert Layout Screenshot]* | ✅ Pass |
-| **XOR2** | *[Insert Layout Screenshot]* | ✅ Pass |
-| **MUX 2:1** | *[Insert Layout Screenshot]* | ✅ Pass |
-
----
-
-## 📈 Performance Metrics (Example: Inverter)
+## Performance Metrics (Example: Inverter)
 * **Propagation Delay ($t_{pd}$):** ~15ps (at Typical Corner).
 * **Rise/Fall Time:** Optimized for symmetry.
 * **Power:** Measured Static (Leakage) and Dynamic Power dissipation.
-
-*[Insert Image: Post-Layout Simulation Waveform from Lab 5 Report]*
-
 ---
-
-## 🎓 References & Coursework
-* **Course:** Introduction to VLSI Design (EE3201).
-* **Institution:** Ho Chi Minh City University of Technology (HCMUT - VNU-HCM).
-* **Faculty:** Faculty of Electrical & Electronics Engineering.
-
----
-*Note: This repository contains educational project files. PDK libraries (TSMC/GPDK) are proprietary and are NOT included.*
