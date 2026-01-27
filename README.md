@@ -8,7 +8,7 @@ The project simulates the complete lifecycle of standard cell design and digital
 **Key Achievements:**
 * Designed and verified a multi-function **ALU** and **Accumulator** using SystemVerilog.
 * Synthesized designs using **Cadence Genus** and optimized timing constraints (SDC).
-* Implemented **Clock Gating** reducing dynamic power consumption significantly.
+* Implemented **Clock Gating** reducing total power consumption significantly.
 * Designed Custom Schematics and Layouts for Standard Cells (Inverter, NAND, NOR, XOR, MUX).
 * Achieved **DRC/LVS Clean** layouts using **Cadence Virtuoso Layout Suite XL**.
 
