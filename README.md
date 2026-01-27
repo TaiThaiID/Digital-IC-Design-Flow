@@ -36,7 +36,7 @@ Performed logic synthesis mapping RTL to the **45nm Standard Cell Library**.
     * Defined clock constraints and I/O delays using SDC files.
     * Analyzed Critical Paths and Setup/Hold violations.
 
-![STA](docs/images/Critical Path.jpg)
+![STA](docs/images/Critical_Path.jpg)
 
 
 ### Low Power Implementation (Clock Gating)
@@ -44,9 +44,9 @@ Implemented integrated **Clock Gating** cells to disable clock signals for inact
 * **Result:** Total power slightly increased compared to the baseline design (non-gated).
 * Validated that for small-scale designs (4-bit ALU), the logic overhead exceeds the power savings. This confirms Clock Gating is most effective for larger datapaths
 
-![non-gated](docs/images/Power Report_Non-Gated.jpg)
+![non-gated](docs/images/Power_Report_Non-Gated.jpg)
 
-![gated](docs/images/Power Report_Gated.jpg)
+![gated](docs/images/Power_Report_Gated.jpg)
 
 
 ## Custom Circuit Design & Layout
