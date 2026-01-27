@@ -1,0 +1,2 @@
+#e1(20Nov2025:10:04:22): source ./xcelium.d/env.d/env.history.20Nov2025_10_04_22
+s1(20Nov2025:10:04:22):  xrun -define GATE_LEVEL +access+rw 01_tb/alu_tb.sv 

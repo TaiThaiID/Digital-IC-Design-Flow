@@ -1,0 +1,2 @@
+#e1(17Nov2025:10:47:08): source ./xcelium.d/env.d/env.history.17Nov2025_10_47_08
+s1(17Nov2025:10:47:08):  xrun -define GATE_LEVEL -define ANNOTATION +access+rw 01_tb/alu_tb.sv 

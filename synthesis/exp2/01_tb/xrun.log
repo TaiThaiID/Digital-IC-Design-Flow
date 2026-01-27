@@ -1,0 +1,8 @@
+xrun(64): 24.09-s005: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.09-s005: Started on Nov 20, 2025 at 10:04:21 +07
+xrun
+	-define GATE_LEVEL
+	+access+rw
+	01_tb/alu_tb.sv
+xrun: *SE,FILEMIS: Cannot find the provided file 01_tb/alu_tb.sv.
+TOOL:	xrun(64)	24.09-s005: Exiting on Nov 20, 2025 at 10:04:22 +07  (total: 00:00:01)
